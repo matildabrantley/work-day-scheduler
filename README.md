@@ -1,6 +1,17 @@
 # Work Day Scheduler
 Webpage for planning upcoming activities on a hourly basis
 
+## Features
+
+* Handles any starting time and work day length.
+* Uses Moment.js to retrieve current hour and style content based on past, present or future.
+* Locally stores activities for future page visits.
+* Time block elements are cloned with jQuery from an HTML prototype so that every attribute and descendent are easily created. Prototype removed when done.
+
+## Screenshot
+
+![Screenshot On](assets/images/screenshot1.jpg)
+
 ## Project Requirements
 
 **Given I am using a daily planner to create a schedule**

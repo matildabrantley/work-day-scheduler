@@ -42,11 +42,15 @@ for (var h=0; h<workHours; h++) {
 //remove prototype timeblock at start
 schedule.children().first().remove();
 
+//save button event listener, locally stores textarea
 schedule.on('click', '.saveBtn', saveItem);
 
+//use local storage to save textarea for future page visits
 function saveItem(event){
+    //get targeted button
     var targetButton = $(event.target);
+    //get targeted button's previous sibling: textarea
     var textArea = targetButton.prev();
-    console.log(textArea);
+    //textArea stored locally using textArea's id as key (e.g. "hour-9")
     localStorage.setItem(textArea.attr("id"), textArea.val());
 }
